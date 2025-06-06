@@ -24,7 +24,7 @@ def pregunta_09():
      'jjj': 18}}
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = 'data.csv'
 
     # Dictionary to store the count of each key
     key_counts = {}

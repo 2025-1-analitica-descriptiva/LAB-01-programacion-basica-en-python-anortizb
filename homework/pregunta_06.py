@@ -26,7 +26,7 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = 'data.csv'
 
     # Dictionary to store (min_value, max_value) for each key
     key_stats = {}

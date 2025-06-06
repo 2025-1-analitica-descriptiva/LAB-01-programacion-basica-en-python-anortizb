@@ -18,7 +18,7 @@ def pregunta_10():
      ('E', 2, 3),
      ('E', 3, 3)]
     """
-    file_path = 'data.csv'
+    file_path = 'files\input\data.csv'
 
     result = []
     with open(file_path, 'r') as file:

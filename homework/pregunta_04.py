@@ -26,7 +26,7 @@ def pregunta_04():
      ('12', 3)]
 
     """
-    file_path = 'data.csv'
+    file_path = 'files\input\data.csv'
 
     month_counts = {}
     with open(file_path, 'r') as file:

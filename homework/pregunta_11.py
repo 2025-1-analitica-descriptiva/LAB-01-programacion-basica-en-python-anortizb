@@ -15,7 +15,7 @@ def pregunta_11():
     {'a': 122, 'b': 49, 'c': 91, 'd': 73, 'e': 86, 'f': 134, 'g': 35}
 
     """
-    file_path = 'data.csv'
+    file_path = 'files\input\data.csv'
 
     # Dictionary to store the sum of column 2 for each letter in column 4
     letter_sum = {}

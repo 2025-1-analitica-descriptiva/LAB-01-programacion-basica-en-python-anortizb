@@ -16,7 +16,7 @@ def pregunta_01():
     """
     sum_total = 0
 
-    with open('data.csv', 'r') as file:
+    with open('files\input\data.csv', 'r') as file:
 
         for line in file:
             obs = line.split('\t')        
@@ -25,5 +25,4 @@ def pregunta_01():
     
     return sum_total
 
-if __name__ == "__main__":
-    print(pregunta_01())
+

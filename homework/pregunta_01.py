@@ -16,7 +16,7 @@ def pregunta_01():
     """
     sum_total = 0
 
-    with open(r'files\input\data.csv', 'r') as file:
+    with open(r'files\input\data.csv', 'r', encoding="utf-8") as file:
 
         for line in file:
             obs = line.split('\t')        

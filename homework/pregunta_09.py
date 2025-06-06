@@ -24,12 +24,12 @@ def pregunta_09():
      'jjj': 18}}
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = r"files\input\data.csv"
 
     # Dictionary to store the count of each key
     key_counts = {}
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
         for line in file:
             parts = line.strip().split('\t')
             if len(parts) > 4:  # Ensure there's at least a fifth column

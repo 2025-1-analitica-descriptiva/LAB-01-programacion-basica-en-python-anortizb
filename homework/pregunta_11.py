@@ -15,12 +15,12 @@ def pregunta_11():
     {'a': 122, 'b': 49, 'c': 91, 'd': 73, 'e': 86, 'f': 134, 'g': 35}
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = r"files\input\data.csv"
 
     # Dictionary to store the sum of column 2 for each letter in column 4
     letter_sum = {}
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
         for line in file:
             parts = line.strip().split('\t')
             

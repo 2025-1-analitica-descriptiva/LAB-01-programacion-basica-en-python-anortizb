@@ -15,12 +15,12 @@ def pregunta_05():
     [('A', 9, 2), ('B', 9, 1), ('C', 9, 0), ('D', 8, 3), ('E', 9, 1)]
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = r"files\input\data.csv"
 
     # Dictionary to store (max_value, min_value) for each letter
     letter_stats = {}
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
         for line in file:
             parts = line.strip().split('\t')
             if len(parts) > 1:

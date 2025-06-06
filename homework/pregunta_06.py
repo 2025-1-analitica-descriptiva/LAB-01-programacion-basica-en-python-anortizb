@@ -26,12 +26,12 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = r"files\input\data.csv"
 
     # Dictionary to store (min_value, max_value) for each key
     key_stats = {}
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
         for line in file:
             parts = line.strip().split('\t')
             if len(parts) > 4:  # Ensure there's at least a fifth column

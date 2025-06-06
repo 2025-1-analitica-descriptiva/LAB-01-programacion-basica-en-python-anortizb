@@ -14,9 +14,10 @@ def pregunta_01():
     214
 
     """
+    file_path = r"files\input\data.csv"
     sum_total = 0
 
-    with open('files/input/data.csv', 'r', encoding = "utf-8") as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
 
         for line in file:
             obs = line.split('\t')        

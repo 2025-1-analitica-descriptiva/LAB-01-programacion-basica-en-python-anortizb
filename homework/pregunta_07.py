@@ -25,12 +25,12 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
-    file_path = 'files\input\data.csv'
+    file_path = r"files\input\data.csv"
 
     # Dictionary to store lists of letters for each value in column 2
     value_to_letters = {}
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding = "utf-8") as file:
         for line in file:
             parts = line.strip().split('\t')
             if len(parts) > 1:  # Ensure there's at least a first and second column

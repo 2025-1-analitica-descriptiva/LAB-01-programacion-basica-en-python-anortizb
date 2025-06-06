@@ -24,3 +24,26 @@ def pregunta_09():
      'jjj': 18}}
 
     """
+    file_path = 'files\input\data.csv'
+
+    # Dictionary to store the count of each key
+    key_counts = {}
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            parts = line.strip().split('\t')
+            if len(parts) > 4:  # Ensure there's at least a fifth column
+                dict_str = parts[4]
+                # Split the string by commas to get individual key-value pairs
+                pairs = dict_str.split(',')
+                
+                for pair in pairs:
+                    if ':' in pair:
+                        key, _ = pair.split(':') # We only need the key
+                        key_counts[key] = key_counts.get(key, 0) + 1
+
+    # Return the dictionary with sorted keys for consistent output
+    return dict(sorted(key_counts.items()))
+
+if __name__ == "__main__":
+    print(pregunta_09())

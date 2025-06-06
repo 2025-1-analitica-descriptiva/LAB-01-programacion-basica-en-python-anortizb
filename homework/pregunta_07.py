@@ -25,3 +25,29 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+    file_path = 'files\input\data.csv'
+
+    # Dictionary to store lists of letters for each value in column 2
+    value_to_letters = {}
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            parts = line.strip().split('\t')
+            if len(parts) > 1:  # Ensure there's at least a first and second column
+                letter = parts[0]  # Column 0
+                try:
+                    value = int(parts[1])  # Column 1
+                    
+                    if value not in value_to_letters:
+                        value_to_letters[value] = []
+                    value_to_letters[value].append(letter)
+                except ValueError:
+                    # Handle cases where the second column might not be an integer
+                    pass
+
+    # Convert the dictionary to a list of tuples and sort by the integer value
+    result = sorted(value_to_letters.items())
+    return result
+
+if __name__ == "__main__":
+    print(pregunta_07())

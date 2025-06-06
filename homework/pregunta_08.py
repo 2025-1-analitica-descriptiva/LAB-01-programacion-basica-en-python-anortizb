@@ -27,3 +27,32 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
+    file_path = 'files\input\data.csv'
+
+    # Dictionary to store sets of unique letters for each value in column 2
+    value_to_unique_letters = {}
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            parts = line.strip().split('\t')
+            if len(parts) > 1:  # Ensure there's at least a first and second column
+                letter = parts[0]  # Column 0
+                try:
+                    value = int(parts[1])  # Column 1
+                    
+                    if value not in value_to_unique_letters:
+                        value_to_unique_letters[value] = set()
+                    value_to_unique_letters[value].add(letter)
+                except ValueError:
+                    # Handle cases where the second column might not be an integer
+                    pass
+
+    # Convert the dictionary to a list of tuples (value, sorted_list_of_unique_letters)
+    result = []
+    for value, letters_set in sorted(value_to_unique_letters.items()):
+        result.append((value, sorted(list(letters_set))))
+        
+    return result
+
+if __name__ == "__main__":
+    print(pregunta_08())

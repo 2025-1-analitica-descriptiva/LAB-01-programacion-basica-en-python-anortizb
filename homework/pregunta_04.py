@@ -4,7 +4,7 @@ datos requeridos se encuentran en el archivo data.csv. En este laboratorio
 solo puede utilizar las funciones y librerias basicas de python. No puede
 utilizar pandas, numpy o scipy.
 """
-
+import os
 
 def pregunta_04():
     """
@@ -26,3 +26,21 @@ def pregunta_04():
      ('12', 3)]
 
     """
+    file_path = 'files\input\data.csv'
+
+    month_counts = {}
+    with open(file_path, 'r') as file:
+        for line in file:
+            parts = line.strip().split('\t')
+            if len(parts) > 2:  # Ensure there's at least a third column
+                date_str = parts[2]
+                # Extract the month (MM) from the 'YYYY-MM-DD' string
+                month = date_str[5:7]
+                month_counts[month] = month_counts.get(month, 0) + 1
+
+    # Convert the dictionary to a list of tuples and sort by month string
+    result = sorted(month_counts.items())
+    return result
+
+if __name__ == "__main__":
+    print(pregunta_04())

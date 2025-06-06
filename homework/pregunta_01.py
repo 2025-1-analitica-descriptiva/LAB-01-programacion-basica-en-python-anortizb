@@ -14,3 +14,16 @@ def pregunta_01():
     214
 
     """
+    sum_total = 0
+
+    with open('files\input\data.csv', 'r') as file:
+
+        for line in file:
+            obs = line.split('\t')        
+            if len(obs) >= 2:
+                sum_total += int(obs[1])
+    
+    return sum_total
+
+if __name__ == "__main__":
+    print(pregunta_01())

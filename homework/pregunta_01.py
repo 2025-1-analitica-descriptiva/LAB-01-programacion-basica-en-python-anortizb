@@ -14,7 +14,7 @@ def pregunta_01():
     214
 
     """
-    file_path = r"files\input\data.csv"
+    file_path = "files/input/data.csv"
     sum_total = 0
 
     with open(file_path, 'r', encoding = "utf-8") as file:

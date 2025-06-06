@@ -25,7 +25,7 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
-    file_path = r"files\input\data.csv"
+    file_path = "files/input/data.csv"
 
     # Dictionary to store lists of letters for each value in column 2
     value_to_letters = {}

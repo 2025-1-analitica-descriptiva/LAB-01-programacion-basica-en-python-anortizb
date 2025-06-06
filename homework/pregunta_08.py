@@ -27,7 +27,7 @@ def pregunta_08():
      (9, ['A', 'B', 'C', 'E'])]
 
     """
-    file_path = r"files\input\data.csv"
+    file_path = "files/input/data.csv"
 
     # Dictionary to store sets of unique letters for each value in column 2
     value_to_unique_letters = {}

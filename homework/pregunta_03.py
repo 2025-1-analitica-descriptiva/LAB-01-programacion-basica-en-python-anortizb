@@ -15,7 +15,7 @@ def pregunta_03():
     [('A', 53), ('B', 36), ('C', 27), ('D', 31), ('E', 67)]
 
     """
-    file_path = r"files\input\data.csv"
+    file_path = "files/input/data.csv"
 
     sums = {}
     with open(file_path, 'r', encoding = "utf-8") as file:
